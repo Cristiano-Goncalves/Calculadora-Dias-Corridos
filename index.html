@@ -7,32 +7,50 @@
     <link rel="shortcut icon" href="math.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
+
+        <button id="botaoTema" class="tema" onclick="alternarTema()">
+            🌙
+        </button>
+
         <h1>📅 Calculadora de Dias Corridos</h1>
+
         <p>
-            Bem-vindo!<br>
+            Bem-vindo (a)!<br>
             Informe as datas abaixo para calcular os dias corridos.
         </p>
 
-        <label>Data de emissão da nota:</label>
+        <label for="dataEmissao">
+            Data de emissão da nota:
+        </label>
+
         <input type="date" id="dataEmissao">
 
-        <label>Data de pagamento boleto (condição 1):</label>
+        <label for="dataPagamento1">
+            Data de pagamento boleto (condição 1):
+        </label>
+
         <input type="date" id="dataPagamento1">
 
-        <label>Data de pagamento boleto (condição 2):</label>
+        <label for="dataPagamento2">
+            Data de pagamento boleto (condição 2):
+        </label>
+
         <input type="date" id="dataPagamento2">
 
-        <button onclick="calcularDias()">Calcular</button>
+        <button onclick="calcularDias()">
+            Calcular
+        </button>
 
         <h2 id="resultado1"></h2>
         <h2 id="resultado2"></h2>
-                
+
     </div>
 
     <script src="script.js"></script>
-    
+
 </body>
 </html>

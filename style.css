@@ -1,163 +1,196 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 100vh;
-
-    padding: 20px;
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+    transition:.3s;
 }
 
-.container {
-    background: white;
-
-    width: 100%;
-    max-width: 450px;
-
-    padding: 40px;
-
-    border-radius: 12px;
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    text-align: center;
+.container{
+    position:relative;
+    width:100%;
+    max-width:450px;
+    padding:40px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+    text-align:center;
+    transition:.3s;
 }
 
-h1 {
-    margin-bottom: 15px;
-    font-size: 2rem;
+h1{
+    margin-bottom:15px;
+    font-size:2rem;
 }
 
-p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 25px;
+p{
+    margin-bottom:25px;
+    font-size:1rem;
+    color:#555;
 }
 
-label {
-    display: block;
-
-    text-align: left;
-
-    margin-top: 15px;
-    margin-bottom: 5px;
-
-    font-weight: bold;
+label{
+    display:block;
+    margin:15px 0 5px;
+    text-align:left;
+    font-weight:bold;
 }
 
-input {
-    width: 100%;
-
-    padding: 12px;
-
-    border: 1px solid #ccc;
-    border-radius: 6px;
-
-    font-size: 16px;
+input,
+button{
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    font-size:16px;
+    transition:.3s;
 }
 
-button {
-    width: 100%;
-
-    margin-top: 25px;
-    padding: 12px;
-
-    background-color: #007BFF;
-    color: white;
-
-    border: none;
-    border-radius: 6px;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
+input{
+    border:1px solid #ccc;
 }
 
-button:hover {
-    background-color: #0056b3;
+button{
+    margin-top:25px;
+    border:none;
+    background:#007BFF;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-h2 {
-    margin-top: 20px;
-
-    font-size: 1.3rem;
-    color: #0a0a0a;
+button:hover{
+    background:#0056b3;
 }
 
-footer {
-    margin-top: 30px;
-
-    font-size: 12px;
-    color: #777;
+h2{
+    margin-top:20px;
+    font-size:1.3rem;
+    color:#0a0a0a;
 }
 
+footer{
+    margin-top:30px;
+    font-size:12px;
+    color:#777;
+}
+
+/* BOTÃO TEMA */
+.tema{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:36px;
+    height:36px;
+    margin:0;
+    padding:0;
+    border-radius:50%;
+    background:rgba(0,0,0,.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    box-shadow:none;
+}
+
+.tema:hover{
+    background:rgba(0,0,0,.9);
+    transform:scale(1.05);
+}
+
+/* DARK MODE */
+.dark{
+    background:#121212;
+}
+
+.dark .container{
+    background:#1e1e1e;
+    color:#fff;
+}
+
+.dark p,
+.dark footer{
+    color:#bbb;
+}
+
+.dark label,
+.dark h2{
+    color:#fff;
+}
+
+.dark input{
+    background:#2a2a2a;
+    color:#fff;
+    border-color:#444;
+}
+
+.dark .tema{
+    background:rgba(241,196,15,.85);
+    color:#000;
+}
+
+.dark .tema:hover{
+    background:rgba(241,196,15,1);
+}
 
 /* TABLETS */
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-    .container {
-        max-width: 90%;
-        padding: 30px;
+    .container{
+        max-width:90%;
+        padding:30px;
     }
 
-    h1 {
-        font-size: 1.8rem;
+    h1{
+        font-size:1.8rem;
     }
 }
 
-
 /* CELULARES */
-@media (max-width: 480px) {
+@media(max-width:480px){
 
-    body {
-        padding: 10px;
-        align-items: flex-start;
+    body{
+        padding:10px;
+        align-items:flex-start;
     }
 
-    .container {
-        width: 100%;
-
-        max-width: 100%;
-
-        padding: 25px;
-
-        margin-top: 20px;
+    .container{
+        max-width:100%;
+        padding:25px;
+        margin-top:20px;
     }
 
-    h1 {
-        font-size: 1.5rem;
+    h1{
+        font-size:1.5rem;
+        padding-right:35px;
     }
 
-    p {
-        font-size: 0.95rem;
+    p,
+    label{
+        font-size:.95rem;
     }
 
-    label {
-        font-size: 0.95rem;
+    h2{
+        font-size:1.1rem;
     }
 
-    input,
-    button {
-        font-size: 16px;
+    footer{
+        font-size:11px;
     }
 
-    h2 {
-        font-size: 1.1rem;
-    }
-
-    footer {
-        font-size: 11px;
+    .tema{
+        top:18px;
+        right:18px;
+        width:34px;
+        height:34px;
+        font-size:16px;
     }
 }
